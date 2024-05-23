@@ -1,0 +1,14 @@
+{
+  "name": "tok",
+  "version": "1.0.0",
+  "description": "A simple file tokenizer",
+  "main": "dist/index.js",
+  "repository": "git+https://github.com/luxo-ai/tok.git",
+  "author": "luxo-ai",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "tsc": "^2.0.4",
+    "typescript": "^5.4.5"
+  }
+}

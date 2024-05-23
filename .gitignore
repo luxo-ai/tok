@@ -1,0 +1,20 @@
+# macOS stuff
+.DS_Store
+
+# vim tmp files
+*~
+
+# yarn stuff
+yarn-error.log*
+
+# npm stuff
+npm-debug-log*
+
+# node modules
+/node_modules/
+
+# vscode stuff
+.vscode
+
+# build
+/dist/
