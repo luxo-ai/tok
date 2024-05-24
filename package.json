@@ -2,13 +2,42 @@
   "name": "tok",
   "version": "1.0.0",
   "description": "A simple file tokenizer",
-  "main": "dist/index.js",
   "repository": "git+https://github.com/luxo-ai/tok.git",
   "author": "luxo-ai",
   "license": "MIT",
   "private": false,
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "microbundle --format modern,cjs --no-sourcemap",
+    "build:dev": "microbundle watch --no-compress --format modern,cjs",
+    "prebuild": "yarn rimraf dist",
+    "start": "node dist/src/index.cjs",
+    "lint": "eslint ./src/**/*.ts",
+    "test": "jest"
+  },
   "devDependencies": {
-    "tsc": "^2.0.4",
-    "typescript": "^5.4.5"
+    "@types/jest": "^29.5.12",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "eslint": "^9.3.0",
+    "fs": "^0.0.1-security",
+    "jest": "^29.7.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.7",
+    "ts-jest": "^29.1.3",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.10.0"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "stream": "^0.0.2"
   }
 }
